@@ -1,7 +1,7 @@
 # 原作の世界観
 
 > 原作における公式の世界設定をまとめます。
-> 今作での改変は `references/divergence.md` と `world/` に記載してください。
+> 今作での改変は `backbone/divergence.md` と `world/` に記載してください。
 
 ## 基本設定
 

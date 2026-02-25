@@ -15,7 +15,7 @@
 ## ステータス
 
 - [ ] 原作設定まとめ（`references/canon/`）
-- [ ] 改変点の整理（`references/divergence.md`）
+- [ ] 改変点の整理（`backbone/divergence.md`）
 - [ ] 企画・設定構築
 - [ ] プロット作成
 - [ ] 第1章 執筆
@@ -28,24 +28,37 @@
 
 ```
 ├── CLAUDE.md           # AI執筆指示（Claude Code 用）
-├── references/         # 原作の公式設定・改変点（読み取り専用）
-│   ├── canon/          # 原作の公式設定
-│   └── divergence.md   # 原作からの分岐・改変点
+├── references/         # 原作データ（再利用用）
+│   └── canon/          # 原作の公式設定
 ├── synopsis/           # 今作のあらすじ・プロット
 ├── characters/         # 今作でのキャラクター設定
 ├── world/              # 今作での世界観設定
-├── backbone/           # テーマ・年表・相関図
+├── backbone/           # テーマ・年表・相関図・分岐管理
 ├── style/              # 文体ガイド・用語集
-└── drafts/             # 執筆原稿
+├── drafts/             # 執筆原稿
+└── scripts/            # 補助スクリプト
 ```
 
 ## 使い方
 
 1. まず `references/canon/` に原作の設定をまとめる
-2. `references/divergence.md` で原作からの改変点を明確にする
+2. `backbone/divergence.md` で原作からの改変点を明確にする
 3. 各ディレクトリの `{{}}` プレースホルダを埋めて今作の設定を完成させる
 4. `CLAUDE.md` の執筆ルールを作品に合わせて調整する
 5. Claude Code や ChatGPT 等の AI に設定を読み込ませて執筆する
+
+## 原作データの再利用
+
+- `references/` は原作データ専用に保ち、別プロジェクトへそのままコピーして使い回す
+- 新規プロジェクト作成時は `scripts/new_fic.sh` を使うと、雛形作成と原作データ流用をまとめて実行できる
+
+```bash
+# 雛形を作る（参照データはテンプレートのまま）
+./scripts/new_fic.sh ../my_fic
+
+# 既存プロジェクトの references/ を流用して雛形を作る
+./scripts/new_fic.sh ../my_fic ../existing_fic
+```
 
 ## ライセンス
 
