@@ -33,13 +33,14 @@
 1. 原作の設定は `references/canon/` を**正**とする
 2. 原作から改変する場合は、必ず先に `references/divergence.md` に記載する
 3. `references/divergence.md` の「維持する設定」に書かれた要素は変えない
-4. 原作キャラを書く際は `references/canon/characters.md` の口調・性格を確認する
+4. 原作キャラを書く際は `references/canon/characters/{{キャラ名}}.md` の口調・性格を確認する
 5. オリジナルキャラは `characters/original_{{名前}}.md` で作成する
+6. 今作に登場しない原作キャラのファイルは作成しない（必要になった時点で追加する）
 
 ## 執筆時の注意
 
 1. 新しい章を書く前に、必ず `synopsis/outline.md` と該当章の `synopsis/chapters/chXX.md` を確認すること
-2. キャラの口調は `references/canon/characters.md`（原作設定）と `characters/`（今作の解釈）を両方確認すること
+2. キャラの口調は `references/canon/characters/{{キャラ名}}.md`（原作設定）と `characters/`（今作の解釈）を両方確認すること
 3. 新しい固有名詞を出したら `style/glossary.md` に追加すること
 4. 設定矛盾を避けるため、`references/canon/` と `world/` と `backbone/timeline.md` を参照すること
 5. キャラクターを新規追加した場合は `backbone/relationships.md` も更新すること
